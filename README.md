@@ -37,47 +37,51 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
+#### options.tresholds
+Type: `object`
+Default value: ` {
+			"elements": 100,
+			"statements": 100,
+			"conditionals": 100,
+			"methods": 100
+		}`
+		
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the default options are used to run default tresholds (80) on a file.
 
 ```js
 grunt.initConfig({
   check_clover_coverage: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      src: ["test/fixtures/report.xml"]
     },
   },
 });
 ```
 
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+In this example, custom options are used to enforce a 100% coverage.
 
 ```js
 grunt.initConfig({
   check_clover_coverage: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      "tresholds": {
+			"elements": 100,
+			"statements": 100,
+			"conditionals": 100,
+			"methods": 100
+		}
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+    success : {
+        src: ["test/fixtures/success.xml"]
     },
+    fail : {
+        src: ["test/fixtures/failure.xml"]
+    }
   },
 });
 ```
