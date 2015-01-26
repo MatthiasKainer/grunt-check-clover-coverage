@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1422256697">
+  <project timestamp="1422256697">
+    <file name="Wrapper.php">
+      <class name="Wrapper" namespace="global">
+        <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </class>
+      <line num="3" type="method" name="wrap" crap="2" count="4"/>
+      <line num="4" type="stmt" count="4"/>
+      <line num="5" type="stmt" count="4"/>
+      <line num="6" type="stmt" count="4"/>
+      <metrics loc="9" ncloc="9" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+    </file>
+    <metrics files="1" loc="9" ncloc="9" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+  </project>
+</coverage>
